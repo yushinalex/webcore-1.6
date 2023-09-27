@@ -1,0 +1,195 @@
+.prices__layout {
+    background-color: #F8F8F8;
+    font-size: 14px;
+    color: $text-2;
+    padding-bottom: 32px;
+    
+
+    @media (min-width: 768px) {
+        padding: 32px 24px;
+    }
+
+    @media (min-width: 1120px) {
+        padding: 32px;
+    }
+}
+
+.prices__table-header {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 52% 13% 35%;
+        padding: 0 16px;
+        margin-bottom: 16px;
+        color: $text;
+    }
+
+    @media (min-width: 1120px) {
+        grid-template-columns: 45% 20% 35%;
+    }
+}
+
+
+.prices__list {
+
+    @media (min-width: 768px) {
+        padding: 0 16px;
+        background-color: $background-color-1;
+        border: 1px solid $background-color-1;
+        border-radius: 5px;
+    }
+
+    @media (min-width: 1120px) {
+        padding: 0 24px;
+    }
+}
+
+.prices__card {
+    padding: 16px 0;
+    background-color: $background-color-1;
+    display: grid;
+
+    @media (max-width: 767.98px) {
+        height: 200px;
+        width: 228px;
+        padding: 0 16px;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: 52% 13% 35%;
+        border-bottom: 1px solid #EAEAEA;
+        align-items: center;
+    }
+
+    @media (min-width: 1120px) {
+        grid-template-columns: 45% 20% 35%;
+    }
+}
+
+.swiper-slide:last-child .prices__card{
+    @media (min-width: 768px) {
+        border: 0;
+    }
+}
+
+.prices__order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-button {
+    padding: 0;
+    width: 120px;
+    height: 32px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+    transition-duration: 0.7s;
+    position: relative;
+    background-color: $button;
+    color: $background-color-1;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 600;
+    padding-left: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-top: 3px solid $background-color-1;
+        border-right: 3px solid $background-color-1; 
+        transform: rotate(45deg);
+        top: 12px;
+        right: 16px;
+    }
+
+    &:hover {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 767.98px) {
+
+.prices__service-name::before {
+    content: "Ремонтные услуги";
+    display: block;
+    color: $text;
+    margin-bottom: 4px;
+}
+
+.prices__price::before {
+    content: "Цена";
+    display: block;
+    color: $text;
+    margin-bottom: 4px;
+
+}
+
+.prices__time::before {
+    content: "Срок";
+    display: block;
+    color: $text;
+    margin-bottom: 4px;
+
+}
+
+}
+
+.prices__info {
+max-width: 450px;
+padding-left: 16px;
+padding-right: 16px;
+font-size: 14px;
+margin-top: 16px;
+margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+        padding-left: 24px;
+        padding-right: 0;
+        margin-top: 0;
+    }
+
+    @media (min-width: 1120px) {
+        padding-left: 32px;
+    }
+}
+
+.prices__text {
+    margin-top: 0;
+}
+
+.prices__link {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $text-2;
+    position: relative;
+
+    &:after {  
+        content: "";
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid $button;
+        border-right: 2px solid $button; 
+        transform: rotate(45deg);
+        top: 7px;
+        right: -12px;
+     
+        @media (max-width: 329.98px) {
+            top: 28px;
+        }
+    }
+}

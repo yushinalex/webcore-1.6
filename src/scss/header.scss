@@ -1,0 +1,91 @@
+.header {
+    height: 88px;
+    background-color: $background-color-1;
+    border-bottom:1px solid #D9FFF5;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    @media (min-width: 768px) {
+        padding: 0 24px;
+    }
+
+    @media (min-width: 1366px) {
+        display: none;
+    }
+}
+
+.logo {
+    display: inline-block;
+}
+
+.button {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    transition-duration: 0.7s;
+
+    &:hover {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+
+
+    &--burger {
+        background: $button url("../img/burger.svg") no-repeat center;
+    }
+
+    &--call {
+        background: $button url("../img/call.svg") no-repeat center;
+    }
+
+    &--chat {
+        background: $button url("../img/chat.svg") no-repeat center;
+    }
+
+    &--profile {
+        background: $button url("../img/profile.svg") no-repeat center;
+    }
+
+    &--repair {
+        background: $button url("../img/repair.svg") no-repeat center;
+    }
+
+    &--check {
+        background: $button url("../img/check.svg") no-repeat center;
+    }
+
+    &--close {
+        background: $button url("../img/close.svg") no-repeat center;
+    }
+
+    &--search {
+        background: $button url("../img/search.svg") no-repeat center;
+    }
+}
+
+
+.devider {
+    margin: 0 2px;
+}
+
+.part-1,
+.part-2 {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.button--call,
+.button--chat,
+.button--profile,
+.devider-1 {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: inline-block;
+        }
+}

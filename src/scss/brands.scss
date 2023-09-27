@@ -1,0 +1,155 @@
+.section {
+    padding-bottom: 24px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 0;
+    }
+
+    &__top {
+        background-color: $background-color-1;
+        border-top: 1px solid $border;
+        padding: 16px 0;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 500;
+        color: $text;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 32px;
+        margin-right: auto;
+        text-transform: uppercase;
+    }
+
+    &__layout {
+        padding-bottom: 34px;
+        background-color: $background-color-2;
+    }
+
+    &__list {
+        @media (min-width: 768px) {
+            margin: 0;
+            padding: 24px;
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            column-gap: 24px;
+            row-gap: 16px;
+        }
+
+        @media (min-width: 1120px) {
+            padding: 24px 32px;
+            column-gap: 32px;
+            grid-template-columns: repeat(4, minmax(200px, 1fr));
+        }
+    }
+}
+
+.brands__item {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .brands__item {
+        display: none;
+    }
+
+    .brands__item--visible {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .brands__item:nth-child(-n + 6) {
+        display: block;
+    }
+}
+
+@media (min-width: 1120px) {
+    .brands__item:nth-child(-n + 8) {
+        display: block;
+    }
+}
+
+.brands__link {
+    position: relative;
+    display: flex;
+    height: 72px;
+    min-width: 200px;
+    max-width: 240px;
+    background-color: $background-color-1;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid $border-2;
+
+    @media (min-width: 768px) {
+        max-width: 400px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $button;
+        border-radius: 50%;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 34px;
+        top: 32px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid $button;
+        border-right: 2px solid $button; 
+        transform: rotate(45deg);
+    }
+}
+
+.brands__image {
+    display: block;
+    margin-left: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.section__expand {
+    margin-left: 24px;
+
+    @media (min-width: 1120px) {
+        margin-left: 32px;
+    }
+}
+
+.brands__button {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+        display: flex;
+    }
+
+    &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: url("../img/updown.svg") no-repeat center;
+        margin-right: 8px;
+    }
+
+    &--hide::before {
+        content: "";
+        transform: rotate(180deg);
+    }
+}

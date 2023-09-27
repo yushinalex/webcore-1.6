@@ -1,0 +1,96 @@
+.devices__item {
+    position: relative;
+
+    @media (min-width: 768px) {
+            display: none;
+
+        &--visible {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .devices__item:nth-child(-n + 3) {
+        display: block;
+    }
+}
+
+@media (min-width: 1120px) {
+    .devices__item:nth-child(-n + 4) {
+        display: block;
+    }
+}
+
+
+.devices__link {
+    position: relative;
+    display: flex;
+    height: 160px;
+    min-width: 200px;
+    max-width: 240px;
+    background-color: $background-color-1;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #EAEAEA;
+    padding-top: 16px;
+    padding-left: 16px;
+    color: $text-2;
+    font-size: 16px;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+        max-width: 400px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $button;
+        border-radius: 50%;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 34px;
+        bottom: 32px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid $button;
+        border-right: 2px solid $button; 
+        transform: rotate(45deg);
+    }
+}
+
+.devices__button {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+        display: flex;
+    }
+
+    &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: url("../img/updown.svg") no-repeat center;
+        margin-right: 8px;
+    }
+
+    &--hide::before {
+        content: "";
+        transform: rotate(180deg);
+    }
+}
